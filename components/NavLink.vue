@@ -1,8 +1,8 @@
 <template>
   <li>
     <NuxtLink
-      :class="defaultClasses"
-      :active-class="activeClasses"
+      :class="class"
+      :activeClass="activeClass"
       :href="href"
       :target="blank ? '_blank' : ''"
     >
@@ -18,8 +18,8 @@ type NavLink = {
   href: string;
   text?: string;
   imgSrc?: string;
-  defaultClasses?: string;
-  activeClasses?: string;
+  class?: string;
+  activeClass?: string;
   blank?: boolean;
 };
 defineProps<NavLink>();

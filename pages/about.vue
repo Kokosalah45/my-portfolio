@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout :name="layout">
-    <template #section>section</template>
+    <template #section>asasasasasas</template>
   </NuxtLayout>
 </template>
 
