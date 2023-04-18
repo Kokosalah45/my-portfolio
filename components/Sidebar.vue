@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center capitalize font-mono">
     <NuxtLink href="/">
-      <NuxtImg src="/images/K.png" width="90" height="90" />
+      <NuxtImg src="/images/K.png" width="90" height="90" class="p-2" />
     </NuxtLink>
     <h2 class="text-xl select-none text-center text-[#9AEB22]">Kerolous</h2>
     <h3 class="text-[.7rem] select-none text-center text-[#9AEB22]">
