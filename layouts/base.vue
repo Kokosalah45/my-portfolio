@@ -32,8 +32,6 @@
 
     <section class="col-start-2 h-full overflow-auto bg-black-mute relative">
       <slot name="section" />
-
-      <LoadingComponent />
     </section>
   </main>
 </template>

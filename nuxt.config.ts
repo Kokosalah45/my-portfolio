@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   pages: true,
+  ssr: false,
 
   modules: [
     "@nuxtjs/tailwindcss",
@@ -8,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-icon",
   ],
+
   googleFonts: {
     families: {
       "Roboto+Mono": {
