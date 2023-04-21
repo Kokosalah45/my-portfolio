@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         "black-soft": "#242424",
         "black-mute": "#2f2f2f",
+        "green-lizard": "#9AEB22",
+        "olive-drab": "#6da31b",
       },
       fontFamily: {
         mono: ["Roboto Mono", "monospace"],

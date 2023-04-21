@@ -1,14 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   pages: true,
-  ssr: false,
-
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/image-edge",
+    "@nuxt/content",
     "@nuxtjs/google-fonts",
     "nuxt-icon",
   ],
+  content: {
+    highlight: {
+      preload: ["go"],
+      theme: "github-dark",
+    },
+  },
 
   googleFonts: {
     families: {
@@ -16,5 +22,9 @@ export default defineNuxtConfig({
         wght: [100, 400, 700, 900],
       },
     },
+  },
+
+  runtimeConfig: {
+    // The private keys which are only available server-side
   },
 });

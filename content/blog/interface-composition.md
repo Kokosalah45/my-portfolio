@@ -1,0 +1,71 @@
+# Interface Composition
+
+Interface by convention end with “er” and this is actually has a reason behind it
+
+If i have a cooker interface
+
+```go
+type Cooker interface {
+	Grill()
+	Fry()
+	Saute()
+	Pastry()
+	Roast()
+}
+```
+
+The “er” implies that anyone that has those 3 methods is considered to be a COOKER or has the traits of a cooker
+However what if that Cooker only has to work on the Grilling Station or the Sauce Station
+why should i add all that functionality in the Cooker interface maybe he can work at 3 stations
+or all of them however not always all of them all i’m really sure of that he must work at one station
+of all the stations
+And here Comes Interface Compostition
+
+```go
+type Saucier interface {
+	Saute(name string) bool
+}
+type Griller interface {
+	Grill(name string) bool
+}
+type Fryer interface {
+	Fry(name string) bool
+}
+type Patisserie interface{
+	Bake(name string) bool
+}
+type Roaster interface{
+	Roast(name string) bool
+}
+```
+
+no let’s imagine that we want a chef that will handle the grilling station and the frying station
+
+we can do this :
+
+```go
+type FryerGriller interface {
+	Griller
+	Fryer
+}
+```
+
+and this is called composition → FryerGriler Chef is a person who can Fry and Grill !!
+
+```go
+func fryingStation(f Fryer){
+	f.Fry()
+}
+
+func grillingStation(g Griller){
+	g.Grill()
+}
+
+func fryAndGrillAtTheSameTime(fg FryerGriller){
+		//concept of channels is not covered here however imagine that they are
+		// happening in parallel
+		fryingStation(fg)
+		grillingStation(fg)
+		// will work as fg is both a Fryer type and Griller Type
+}
+```

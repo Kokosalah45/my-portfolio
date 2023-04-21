@@ -1,6 +1,6 @@
 <template>
   <ul :class="class">
-    <slot name="links" />
+    <slot name="links" :links="links" />
   </ul>
 </template>
 
@@ -9,7 +9,6 @@ type NavLink = { href: string; text?: string; imgSrc?: string };
 
 type Props = {
   links: NavLink[];
-  linksClass: string;
   class: string;
 };
 
