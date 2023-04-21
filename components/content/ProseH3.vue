@@ -1,5 +1,5 @@
 <template>
-  <h3 class="text-green-lizard font-mono text-xl font-semibold my-3" :id="id">
+  <h3 class="text-green-lizard font-mono text-lg font-semibold my-3" :id="id">
     <a v-if="id && generate" :href="`#${id}`">
       <slot />
     </a>

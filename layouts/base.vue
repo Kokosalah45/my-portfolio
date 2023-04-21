@@ -1,5 +1,5 @@
 <template>
-  <main class="h-screen bg-[#1a1a1a] grid grid-cols-[125px_1fr]">
+  <main class="h-screen bg-[#1a1a1a] grid grid-cols-[125px_1fr] font-mono">
     <aside class="bg-[#1c1c1c] flex-col flex col-start-1 col-end-2">
       <slot name="aside" />
       <slot>
