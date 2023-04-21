@@ -1,6 +1,10 @@
 <template>
-  <main class="h-screen bg-[#1a1a1a] grid grid-cols-[125px_1fr] font-mono">
-    <aside class="bg-[#1c1c1c] flex-col flex col-start-1 col-end-2">
+  <main class="h-screen bg-black-eerie grid grid-cols-[125px_1fr] font-mono">
+    <aside
+      :class="`lg:col-start-1 pt-3 lg:col-end-2 lg:flex lg:static inset-0 fixed lg:bg-black-soft bg-black-soft/90 flex-col  justify-around h-screen z-50 ${
+        !isSideBarOpen ? 'hidden' : 'flex'
+      }`"
+    >
       <slot name="aside" />
       <slot>
         <Sidebar>
@@ -38,10 +42,17 @@
     </aside>
 
     <section
-      class="col-start-2 h-full overflow-auto bg-black-mute relative px-10"
+      class="col-start-1 lg:col-start-2 col-end-3 h-full overflow-auto bg-black-eerie relative lg:px-10 px-2"
     >
       <slot name="section" />
     </section>
+
+    <button
+      @click="isSideBarOpen = !isSideBarOpen"
+      class="fixed z-[99] p-2 top-6 right-6 bg-black-soft shadow-2xl rounded-md lg:hidden"
+    >
+      <Icon size="30" class="text-white" name="simple-line-icons:menu" />
+    </button>
   </main>
 </template>
 
@@ -49,6 +60,9 @@ s
 <script lang="ts" setup>
 import Sidebar from "~/components/Sidebar.vue";
 import NavLink from "~/components/NavLink.vue";
+
+const isSideBarOpen = ref(false);
+
 const internalLinks = [
   { href: "/about", text: "about" },
   { href: "/experience", text: "experience" },
