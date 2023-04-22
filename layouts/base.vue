@@ -43,7 +43,7 @@
     </aside>
 
     <section
-      class="col-start-1 lg:col-start-2 col-end-3 h-full overflow-auto bg-black-eerie relative lg:px-10 px-2"
+      class="col-start-1 lg:col-start-2 col-end-3 h-full overflow-auto bg-black-eerie relative lg:px-10 px-2 scroll-smooth"
     >
       <slot name="section" />
     </section>
@@ -65,8 +65,6 @@ import NavLink from "~/components/NavLink.vue";
 const isSideBarOpen = ref(false);
 
 const internalLinks = [
-  { href: "/about", text: "about" },
-  { href: "/experience", text: "experience" },
   { href: "/contact", text: "contact" },
   { href: "/projects", text: "projects" },
   { href: "/blog", text: "blog" },
