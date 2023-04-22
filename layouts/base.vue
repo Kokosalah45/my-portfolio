@@ -33,6 +33,7 @@
                   class="m-2 inline-block"
                   :blank="true"
                   :imgSrc="imgSrc"
+                  aria-label="Kerolous's social links"
                 />
               </template>
             </NavLinks>
