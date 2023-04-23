@@ -150,4 +150,8 @@ const computedQuery: QueryBuilderParams = computed(() => ({
 }));
 
 const layout = "base";
+
+definePageMeta({
+  keepalive: true,
+});
 </script>
