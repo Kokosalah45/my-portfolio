@@ -8,10 +8,22 @@
     @mouseleave="isHovered = false"
   >
     <NuxtImg :src="img" :alt="imageName" width="150" />
+    <span class="capitalize text-green-lizard"
+      >photo by :
+      <NuxtLink v-if="creator" :to="creator.href">{{ creator.name }}</NuxtLink>
+    </span>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{ img: string; onHoverClasses: string; imageName: string }>();
+defineProps<{
+  img: string;
+  onHoverClasses: string;
+  imageName: string;
+  creator?: {
+    href: string;
+    name: string;
+  };
+}>();
 const isHovered = ref(false);
 </script>
