@@ -43,13 +43,13 @@
             </NuxtLink>
           </div>
           <div class="col-start-2 col-end-3 xl:block hidden mb-11 mr-6">
-            <client-only>
-              <Lottie
-                animationLink="/animations/hello.json "
+            <ClientOnly>
+              <Vue3Lottie
+                animationLink="/animations/hello.json"
                 :height="600"
                 :width="600"
               />
-            </client-only>
+            </ClientOnly>
           </div>
         </section>
         <section
@@ -79,7 +79,6 @@
 
 <script lang="ts" setup>
 const layout = "base";
-const route = useRoute();
 
 const technologies = {
   onHoverClasses: "",

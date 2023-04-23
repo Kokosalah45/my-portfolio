@@ -23,16 +23,12 @@ export default defineNuxtConfig({
       theme: "github-dark",
     },
   },
-
+  keepalive: true,
   googleFonts: {
     families: {
       "Roboto+Mono": {
         wght: [100, 400, 700, 900],
       },
     },
-  },
-
-  runtimeConfig: {
-    // The private keys which are only available server-side
   },
 });
