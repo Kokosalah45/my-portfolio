@@ -26,38 +26,40 @@
               Please take a moment to browse my portfolio and see some examples
               of my work. I look forward to the opportunity to work with you!
             </p>
+
+            <NuxtLink
+              :to="{
+                path: '/',
+                hash: '#welcome',
+              }"
+              class="p-3 fixed bottom-10 z-[99] right-10 rounded-full bg-green-lizard text-black-eerie flex justify-center items-center"
+              :external="true"
+            >
+              <Icon
+                size="30"
+                class="rotate-180"
+                name="tabler:arrow-big-down-filled"
+              />
+            </NuxtLink>
           </div>
-          <div class="xl:block hidden col-start-2 col-end-3 mb-11 mr-6">
+          <div class="col-start-2 col-end-3 xl:block hidden mb-11 mr-6">
             <client-only>
               <Lottie
-                animationLink="/animations/hello.json"
+                animationLink="/animations/hello.json "
                 :height="600"
                 :width="600"
               />
             </client-only>
           </div>
-          <NuxtLink
-            :to="{
-              path: '/',
-              hash: route.hash === '#what-i-know' ? '#welcome' : '#what-i-know',
-            }"
-            class="fixed bottom-9 left-1/2 p-3 bg-green-lizard rounded-full text-black-eerie flex justify-center items-center animate-bounce"
-            :external="true"
-          >
-            <Icon
-              :class="`${
-                route.hash === '#what-i-know' ? 'rotate-180' : ''
-              } transition-all`"
-              size="25"
-              name="tabler:arrow-big-down-filled"
-            />
-          </NuxtLink>
         </section>
-        <section id="what-i-know" class="p-5 h-[65vh]">
+        <section
+          id="what-i-know"
+          class="p-5 min-h-[65vh] lg:m-0 mb-24 relative"
+        >
           <h2 class="text-white text-4xl text-center p-3 mb-5 font-bold">
             What I Know 🥳
           </h2>
-          <ul class="grid grid-cols-dynamic gap-2">
+          <ul class="grid grid-cols-dynamic-md gap-2">
             <li
               v-for="{ imageName, onHoverClasses } in technologies.imagesName"
             >
@@ -68,6 +70,7 @@
               />
             </li>
           </ul>
+          <div></div>
         </section>
       </div>
     </template>

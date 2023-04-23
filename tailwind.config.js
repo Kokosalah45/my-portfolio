@@ -10,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        dynamic: "repeat(auto-fit , minmax(200px , 1fr))",
+        dynamic: "repeat(auto-fit , minmax(150px , 1fr))",
+        "dynamic-md": "repeat(auto-fit , minmax(225px , 1fr))",
       },
       colors: {
         "black-soft": "#242424",
