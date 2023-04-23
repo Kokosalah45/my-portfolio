@@ -8,10 +8,6 @@
     @mouseleave="isHovered = false"
   >
     <NuxtImg :src="img" :alt="imageName" width="150" />
-    <span class="capitalize text-green-lizard"
-      >photo by :
-      <NuxtLink v-if="creator" :to="creator.href">{{ creator.name }}</NuxtLink>
-    </span>
   </div>
 </template>
 
