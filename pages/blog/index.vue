@@ -52,9 +52,9 @@
                         <h2 class="text-2xl font-semibold text-green-lizard">
                           {{ blog.title }}
                         </h2>
-                        <p class="opacity-30 text-xl">
+                        <!-- <p class="opacity-30 text-xl">
                           {{ dateToWords(blog.date) }}
-                        </p>
+                        </p> -->
                       </div>
                     </NuxtLink>
                   </div>
@@ -109,7 +109,6 @@
 </template>
 
 <script lang="ts" setup>
-import dateToWords from "@/utils/dateToWords";
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
 
 const chosenMainTopics = ref<Set<string>>(new Set());
