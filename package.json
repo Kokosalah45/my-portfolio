@@ -22,6 +22,7 @@
     "contentful": "^10.1.0",
     "date-fns": "^2.29.3",
     "nuxt-icon": "^0.3.3",
+    "prismjs": "^1.29.0",
     "vue3-lottie": "^2.5.0"
   }
 }

@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readFileSync } from 'node:fs'
+
 
 export default defineNuxtConfig({
   app: {
@@ -19,8 +21,8 @@ export default defineNuxtConfig({
   ],
   content: {
     highlight: {
-      preload: ["go"],
-      theme: "github-dark",
+      preload: ["go" , "sql"  ],
+      theme: "material-darker",
     },
   },
   keepalive: true,
