@@ -46,8 +46,9 @@
                         class="text-white hover:translate-y-1 border-transparent hover:border-green-lizard border-2 transition-all rounded-md p-5 capitalize flex flex-col gap-4 overflow-hidden"
                       >
                         <NuxtImg
-                          class="rounded-md"
+                          class="rounded-md min-h-36"
                           :src="`/images/content/${blog.mainTopic}.webp`"
+                         
                         />
                         <h2 class="text-2xl font-semibold text-green-lizard">
                           {{ blog.title }}
@@ -130,7 +131,7 @@ const computedChosenMainTopics = computed(() => {
   return temp;
 });
 
-const { data: mainTopics, pending } = await useAsyncData(
+const { data: mainTopics, pending  } = await useAsyncData(
   "mainTopics",
   async () => await queryContent("blog").only("mainTopic").find()
 );

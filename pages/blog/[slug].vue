@@ -13,5 +13,4 @@
 
 <script lang="ts" setup>
 const layout = "base";
-const route = useRoute();
 </script>
