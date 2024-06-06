@@ -21,11 +21,11 @@ export default defineNuxtConfig({
   ],
   content: {
     highlight: {
-      preload: ["go" , "sql"  ],
-      theme: "material-darker",
+      preload: ["go" , "sql"],
+      theme: "material-theme-darker",
+      langs: ["go", "sql"],
     },
   },
-  keepalive: true,
   googleFonts: {
     families: {
       "Roboto+Mono": {
