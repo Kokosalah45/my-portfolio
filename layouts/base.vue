@@ -1,4 +1,5 @@
 <template>
+  <SpeedInsights/>
   <main class="h-screen bg-black-eerie grid grid-cols-[125px_1fr] font-mono">
     <aside
       :class="`lg:col-start-1 pt-3 lg:col-end-2 lg:flex lg:static inset-0 fixed lg:bg-black-soft bg-black-soft/90 flex-col  justify-around h-screen z-50 ${
@@ -54,6 +55,7 @@
     >
       <Icon size="30" class="text-white" name="simple-line-icons:menu" />
     </button>
+    
   </main>
 </template>
 
@@ -61,6 +63,7 @@ s
 <script lang="ts" setup>
 import Sidebar from "~/components/Sidebar.vue";
 import NavLink from "~/components/NavLink.vue";
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 const isSideBarOpen = ref(false);
 
