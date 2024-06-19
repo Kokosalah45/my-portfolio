@@ -1,10 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { readFileSync } from 'node:fs'
+import { ModuleOptions } from 'nuxt/schema';
 
 
-export default defineNuxtConfig({
+
+export default defineNuxtConfig({ 
   app: {
-    head: {
+    head: { 
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       title: "Kerolous",
@@ -21,10 +22,13 @@ export default defineNuxtConfig({
   ],
   content: {
     highlight: {
-      preload: ["go" , "sql"],
-      theme: "material-theme-darker",
-      langs: ["go", "sql"],
+      theme : "one-dark-pro",
+      preload: ["plsql" , "sql" , 'go' , 'docker'
+      ],
+      
+     
     },
+    
   },
   googleFonts: {
     families: {

@@ -46,7 +46,9 @@
                         class="text-white hover:translate-y-1 border-transparent hover:border-green-lizard border-2 transition-all rounded-md p-5 capitalize flex flex-col gap-4 overflow-hidden"
                       >
                         <NuxtImg
-                          class="rounded-md min-h-36"
+                          width="250px"
+                          height="250px"
+                          class="rounded-md"
                           :src="`/images/content/${blog.mainTopic}.webp`"
                          
                         />

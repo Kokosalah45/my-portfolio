@@ -24,6 +24,7 @@
     "nuxt-icon": "^0.3.3",
     "prismjs": "^1.29.0",
     "shiki": "1.6.2",
+    "tm-grammars": "^1.12.10",
     "vue3-lottie": "^2.5.0"
   }
 }
